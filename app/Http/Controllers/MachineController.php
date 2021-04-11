@@ -20,6 +20,7 @@ use App\InventoryMaterial;
 use App\SystemInventory;
 use App\MachineTag;
 use App\Mail\RequestService;
+use GuzzleHttp\Client;
 
 use DB;
 use Mail;
@@ -30,6 +31,7 @@ class MachineController extends Controller
 {
 	private $num_chunks = 12;
 	private $timeshift = 0;
+	private $bearer_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI2MjQxODgwMjFiMWIwY2UwNTA5ZDE3OWUzY2IxMDgxOGM2YmUzMjlhNjY3NTMwOGU0ZGI4NTEwODU4OThlZGUzNjY0NDQwODA1MDkwZWJjNSIsImlzcyI6Imh0dHBzOlwvXC9ybXMudGVsdG9uaWthLW5ldHdvcmtzLmNvbVwvYWNjb3VudCIsImlhdCI6MTYwNTY2NzMyNywibmJmIjoxNjA1NjY3MzI3LCJleHAiOjE2MzcyMDMzMjcsInN1YiI6IjI3OTcwIiwiY2xpZW50X2lkIjoiOTEyM2VhNjYtMmYxZC00MzljLWIxYzItMzExYWMwMTBhYWFkIiwiZmlyc3RfcGFydHkiOmZhbHNlfQ.I0kEBbsYDzIsBr3KFY9utxhSuKLM0zRgrPUBcUUNrIU3V58tce3LUgfV6r8yip5_pOe3ybVQdEoyIXNuehPUDIa8ZxJYadGw15cs9PLDyvM00ipAggnCgi0QinxUcb_5QjaMqfemhTlil9Zquly-P9tGy8GuT-QKAxMMCwGgou_LA3JH-5c7hoImbINMMyWQaHIrK3IiSVXyb0k_tP2tczy7TIjM5NFdzTMZXlVYEwTRZJ7U-_Vyb0ZnyyTJ_Y6_6CNp79vtQ8kVD_Xs_MVCQ0vQbO9qPRAxNu8noq7ZVo1eRdc1Q411puyzm3MeVSg1bWqqG4QboGiMYTyYclwhqA";
 
     public function __construct()
     {
@@ -98,6 +100,28 @@ class MachineController extends Controller
 
         return false;
     }
+
+	public function getPlcStatus($deviceId) {
+		$getLink = 'https://rms.teltonika-networks.com/api/devices/' . $deviceId;
+
+		$client = new Client();
+
+		try {
+			$response = $client->get(
+				$getLink,
+				[
+					'headers' => [
+						'Authorization' => "Bearer " . $this->bearer_token,
+						'Accept' => "application/json"
+					]
+				]
+			);
+
+			return json_decode($response->getBody())->data;
+		} catch (\GuzzleHttp\Exception\BadResponseException $e) {
+            return response()->json(json_decode($e->getResponse()->getBody()->getContents(), true), $e->getCode());
+        }
+	}
 	/*
 		Get general information of product
 		They are Name, Serial number, Software build, and version
@@ -322,6 +346,7 @@ class MachineController extends Controller
 
 		if ($configuration) {
 			$product->teltonikaDevice = Device::where('serial_number', $configuration->teltonika_id)->first();
+			$plcLinkStatus = $configuration->plc_status;
 		}
 
 		if ($request->machineId == MACHINE_VTC_PLUS_CONVEYING_SYSTEM) {
@@ -339,6 +364,23 @@ class MachineController extends Controller
 
 		$saved_machine = SavedMachine::where('user_id', $user->id)
 									->where('device_id', $product->teltonikaDevice->id)->first();
+
+		$plcStatus = $this->getPlcStatus($product->teltonikaDevice->device_id);
+
+		if (!isset($plcStatus->connection_state)) {
+			$product->status = 'routerNotConnected';
+		} else {
+			if ($plcStatus->connection_state != 'connected') {
+				$product->status = 'routerNotConnected';
+			} else if (!$plcLinkStatus) {
+				$product->status = 'plcNotConnected';
+			} else if ($product->running) {
+				$product->status = 'running';
+			} else {
+				$product->status = 'shutOff';
+			}
+		}
+
 		if (!$saved_machine) {
 			$product->isSavedMachine = false;
 		} else {
@@ -1196,7 +1238,7 @@ class MachineController extends Controller
 		if($actualValues)
 			$actuals = json_decode($actualValues->values);
 		if($targetValues)
-			$targets = json_decode($actualValues->values);
+			$targets = json_decode($targetValues->values);
 
 		$items = [$actuals, $targets];
 		return response()->json(compact('items'));
