@@ -171,7 +171,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 0,
                 'bytes' => 0
             ], [
-				'name' => 'Unable to make rate',
+				'name' => 'Unable to Make Rate',
                 'machine_id' => MACHINE_BD_BATCH_BLENDER,
                 'tag_id' => 43,
                 'offset' => 0,
@@ -201,7 +201,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 7,
                 'bytes' => 1
             ], [
-                'name' => 'Out Of Material',
+                'name' => 'Out of Material',
                 'machine_id' => MACHINE_GH_GRAVIMETRIC_EXTRUSION_CONTROL_HOPPER,
                 'tag_id' => 30,
                 'offset' => 0,
@@ -267,37 +267,37 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'Out Of Material (Feeder 1)',
+                'name' => 'Out of Material (Feeder 1)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 28,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Out Of Material (Feeder 2)',
+                'name' => 'Out of Material (Feeder 2)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 29,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Out Of Material (Feeder 3)',
+                'name' => 'Out of Material (Feeder 3)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 30,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Out Of Material (Feeder 4)',
+                'name' => 'Out of Material (Feeder 4)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 31,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Out Of Material (Feeder 5)',
+                'name' => 'Out of Material (Feeder 5)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 32,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Out Of Material (Feeder 6)',
+                'name' => 'Out of Material (Feeder 6)',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 33,
                 'offset' => 0,
@@ -423,7 +423,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Unable to make rate',
+                'name' => 'Unable to Make Rate',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 53,
                 'offset' => 0,
@@ -435,7 +435,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Blender Rate Out Of Range',
+                'name' => 'Blender Rate Out of Range',
                 'machine_id' => MACHINE_ACCUMETER_OVATION_CONTINUOUS_BLENDER,
                 'tag_id' => 55,
                 'offset' => 0,
@@ -444,10 +444,10 @@ class AlarmTypeSeeder extends Seeder
                 'name' => 'System Not Stable',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 7,
+                'offset' => 9,
                 'bytes' => 1
             ], [
-                'name' => 'Out Of Material',
+                'name' => 'Out of Material',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
                 'offset' => 0,
@@ -456,31 +456,31 @@ class AlarmTypeSeeder extends Seeder
                 'name' => 'Load Cell Failure',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 5,
+                'offset' => 6,
                 'bytes' => 1
             ], [
                 'name' => 'No Feeder Flow',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 3,
+                'offset' => 4,
                 'bytes' => 1
             ], [
                 'name' => 'Feeder Underspeed',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 10,
+                'offset' => 11,
                 'bytes' => 1
             ], [
                 'name' => 'Feeder Overspeed',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 9,
+                'offset' => 10,
                 'bytes' => 1
             ], [
                 'name' => 'Hopper Over Max Flow',
                 'machine_id' => MACHINE_GH_F_GRAVIMETRIC_ADDITIVE_FEEDER,
                 'tag_id' => 40,
-                'offset' => 8,
+                'offset' => 9,
                 'bytes' => 1
             ], [
                 'name' => 'Pump Oil Change Required [1]',
@@ -777,7 +777,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 11,
                 'bytes' => 1
             ], [
-                'name' => 'Regen Low air Temperature Fault',
+                'name' => 'Regen Low Air Temperature Fault',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 60,
                 'offset' => 12,
@@ -945,43 +945,43 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader MCP tripped',
+                'name' => 'Mach Loader MCP Tripped',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 10,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader Aux run contact',
+                'name' => 'Mach Loader Aux Run Contact',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 11,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader 1 no convey',
+                'name' => 'Mach Loader 1 No Convey',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 12,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader 2 no convey',
+                'name' => 'Mach Loader 2 No Convey',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 13,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader MCP tripped',
+                'name' => 'Hopper Loader MCP Tripped',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 14,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader Aux run contact',
+                'name' => 'Hopper Loader Aux Run Contact',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 15,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader no convey',
+                'name' => 'Hopper Loader No Convey',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 16,
@@ -1005,67 +1005,67 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 19,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler T/C failure',
+                'name' => 'After-Cooler T/C Failure',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 20,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler high temperature warning',
+                'name' => 'After-Cooler High Temperature Warning',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 21,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler high temperature shutdown',
+                'name' => 'After-Cooler High Temperature Shutdown',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 22,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 Return Air high temp Warning',
+                'name' => 'DH1 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 23,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 Return Air high temp shutdown',
+                'name' => 'DH1 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 24,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 Return Air high temp Warning',
+                'name' => 'DH2 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 25,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 Return Air high temp shutdown',
+                'name' => 'DH2 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 26,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 Return Air high temp Warning',
+                'name' => 'DH3 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 27,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 Return Air high temp shutdown',
+                'name' => 'DH3 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 28,
                 'bytes' => 1
             ], [
-                'name' => 'Low Temperature Selected with no Pre-Cooler',
+                'name' => 'Low Temperature Selected With no Pre-Cooler',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 29,
                 'bytes' => 1
             ], [
-                'name' => 'High Temperature Selected with no After-Cooler',
+                'name' => 'High Temperature Selected With no After-Cooler',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 61,
                 'offset' => 30,
@@ -1107,25 +1107,25 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 5,
                 'bytes' => 1
             ], [
-                'name' => 'PLC initialize',
+                'name' => 'PLC Initialize',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 62,
                 'offset' => 6,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 - Pressure switch verification fail',
+                'name' => 'DH1 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 62,
                 'offset' => 7,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 - Pressure switch verification fail',
+                'name' => 'DH2 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 62,
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 - Pressure switch verification fail',
+                'name' => 'DH3 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_DRYER,
                 'tag_id' => 62,
                 'offset' => 9,
@@ -1437,43 +1437,43 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader MCP tripped',
+                'name' => 'Mach Loader MCP Tripped',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 10,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader Aux run contact',
+                'name' => 'Mach Loader Aux Run Contact',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 11,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader 1 no convey',
+                'name' => 'Mach Loader 1 No Convey',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 12,
                 'bytes' => 1
             ], [
-                'name' => 'Mach Loader 2 no convey',
+                'name' => 'Mach Loader 2 No Convey',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 13,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader MCP tripped',
+                'name' => 'Hopper Loader MCP Tripped',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 14,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader Aux run contact',
+                'name' => 'Hopper Loader Aux Run Contact',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 15,
                 'bytes' => 1
             ], [
-                'name' => 'Hopper Loader no convey',
+                'name' => 'Hopper Loader No Convey',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 16,
@@ -1497,67 +1497,67 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 19,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler T/C failure',
+                'name' => 'After-Cooler T/C Failure',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 20,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler high temperature warning',
+                'name' => 'After-Cooler High Temperature Warning',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 21,
                 'bytes' => 1
             ], [
-                'name' => 'After-Cooler high temperature shutdown',
+                'name' => 'After-Cooler High Temperature Shutdown',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 22,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 Return Air high temp Warning',
+                'name' => 'DH1 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 23,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 Return Air high temp shutdown',
+                'name' => 'DH1 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 24,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 Return Air high temp Warning',
+                'name' => 'DH2 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 25,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 Return Air high temp shutdown',
+                'name' => 'DH2 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 26,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 Return Air high temp Warning',
+                'name' => 'DH3 Return Air High Temp Warning',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 27,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 Return Air high temp shutdown',
+                'name' => 'DH3 Return Air High Temp Shutdown',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 28,
                 'bytes' => 1
             ], [
-                'name' => 'Low Temperature Selected with no Pre-Cooler',
+                'name' => 'Low Temperature Selected With no Pre-Cooler',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 29,
                 'bytes' => 1
             ], [
-                'name' => 'High Temperature Selected with no After-Cooler',
+                'name' => 'High Temperature Selected With no After-Cooler',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 47,
                 'offset' => 30,
@@ -1599,25 +1599,25 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 5,
                 'bytes' => 1
             ], [
-                'name' => 'PLC initialize',
+                'name' => 'PLC Initialize',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 48,
                 'offset' => 6,
                 'bytes' => 1
             ], [
-                'name' => 'DH1 - Pressure switch verification fail',
+                'name' => 'DH1 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 48,
                 'offset' => 7,
                 'bytes' => 1
             ], [
-                'name' => 'DH2 - Pressure switch verification fail',
+                'name' => 'DH2 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 48,
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'DH3 - Pressure switch verification fail',
+                'name' => 'DH3 - Pressure Switch Verification Fail',
                 'machine_id' => MACHINE_NGX_NOMAD_DRYER,
                 'tag_id' => 48,
                 'offset' => 9,
@@ -1821,7 +1821,7 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 21,
                 'bytes' => 1
             ], [
-                'name' => 'Safety Relay output off',
+                'name' => 'Safety Relay Output Off',
                 'machine_id' => MACHINE_T50_CENTRAL_GRANULATOR,
                 'tag_id' => 47,
                 'offset' => 22,
@@ -1893,307 +1893,319 @@ class AlarmTypeSeeder extends Seeder
                 'offset' => 8,
                 'bytes' => 1
             ], [
-                'name' => 'No flow alarm for pump 1',
+                'name' => 'Write to Ret. Mem. Failure',
+                'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
+                'tag_id' => 24,
+                'offset' => 0,
+                'bytes' => 0
+            ],[
+                'name' => 'Too Many Write to Ret. Mem. Failure',
+                'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
+                'tag_id' => 25,
+                'offset' => 0,
+                'bytes' => 0
+            ],[
+                'name' => 'No Flow Alarm For Pump 1',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 26,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High temperature warning alarm',
+                'name' => 'High Temperature Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 27,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High temperature fault alarm',
+                'name' => 'High Temperature Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 28,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low temperature warning alarm',
+                'name' => 'Low Temperature Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 29,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low temperature fault alarm',
+                'name' => 'Low Temperature Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 30,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Compressor fault alarm',
+                'name' => 'Compressor Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 31,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low suction pressure at startup alarm',
+                'name' => 'Low Suction Pressure at Startup Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 32,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low suction pressure warning alarm',
+                'name' => 'Low Suction Pressure Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 33,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low suction pressure fault alarm',
+                'name' => 'Low Suction Pressure Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 34,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High suction pressure warning alarm',
+                'name' => 'High Suction Pressure Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 35,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High suction pressure fault alarm',
+                'name' => 'High Suction Pressure Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 36,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low discharge pressure warning alarm',
+                'name' => 'Low Discharge Pressure Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 37,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low discharge pressure fault alarm',
+                'name' => 'Low Discharge Pressure Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 38,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High discharge pressure warning alarm',
+                'name' => 'High Discharge Pressure Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 39,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High discharge pressure fault alarm',
+                'name' => 'High Discharge Pressure Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 40,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low tank level warning alarm',
+                'name' => 'Low Tank Level Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 41,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low tank level fault alarm',
+                'name' => 'Low Tank Level Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 42,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High tank level warning alarm',
+                'name' => 'High Tank Level Warning Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 43,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High tank level fault alarm',
+                'name' => 'High Tank Level Fault Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 44,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High discharge pressure switch fault',
+                'name' => 'High Discharge Pressure Switch Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 45,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump 1 overload alarm',
+                'name' => 'Pump 1 Overload Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 46,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Condenser fan overload alarm',
+                'name' => 'Condenser Fan Overload Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 47,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Chiller out temperature sensor failure',
+                'name' => 'Chiller Out Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 48,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Chiller in temperature sensor failure',
+                'name' => 'Chiller In Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 49,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Suction pressure sensor failure',
+                'name' => 'Suction Pressure Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 50,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Discharge pressure sensor failure',
+                'name' => 'Discharge Pressure Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 51,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Refrigerant suction temperature sensor failure',
+                'name' => 'Refrigerant Suction Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 52,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Condenser inlet temperature sensro failure',
+                'name' => 'Condenser Inlet Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 53,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Refrigerant liquid temperature sensor failure',
+                'name' => 'Refrigerant Liquid Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 54,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Tank level sensor failure',
+                'name' => 'Tank Level Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 55,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump pressure sensor failure',
+                'name' => 'Pump Pressure Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 56,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump flow sensor failure',
+                'name' => 'Pump Flow Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 57,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Low superheat fault',
+                'name' => 'Low Superheat Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 58,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Auxiliary alarm',
+                'name' => 'Auxiliary Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 59,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump down override fault',
+                'name' => 'Pump Down Override Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 60,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Condenser differential pressure warning',
+                'name' => 'Condenser Differential Pressure Warning',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 61,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Evaporator differential pressure warning',
+                'name' => 'Evaporator Differential Pressure Warning',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 62,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Compressor differential pressure fault',
+                'name' => 'Compressor Differential Pressure Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 63,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Compressor differential pressure warning',
+                'name' => 'Compressor Differential Pressure Warning',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 64,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Tank fill rate of change fault',
+                'name' => 'Tank Fill Rate of Change Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 65,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Phase monitor alarm',
+                'name' => 'Phase Monitor Alarm',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 66,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'High temperature switch fault',
+                'name' => 'High Temperature Switch Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 67,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'To process temperature sensor failure',
+                'name' => 'To Process Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 68,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'From process temperature sensor failure',
+                'name' => 'From Process Temperature Sensor Failure',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 69,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Process high temperature fault',
+                'name' => 'Process High Temperature Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 70,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Process low temperature fault',
+                'name' => 'Process Low Temperature Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 71,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Condenser fan VFD fault',
+                'name' => 'Condenser Fan VFD Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 72,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Process high temperature warning',
+                'name' => 'Process High Temperature Warning',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 73,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Process low temperature warning',
+                'name' => 'Process Low Temperature Warning',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 74,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump 2 no flow fault',
+                'name' => 'Pump 2 No Flow Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 75,
                 'offset' => 0,
                 'bytes' => 0
             ], [
-                'name' => 'Pump 2 overload fault',
+                'name' => 'Pump 2 Overload Fault',
                 'machine_id' => MACHINE_GP_PORTABLE_CHILLER,
                 'tag_id' => 76,
                 'offset' => 0,
@@ -4183,6 +4195,2778 @@ class AlarmTypeSeeder extends Seeder
                 'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
                 'tag_id' => 162,
                 'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 234,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 235,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 1 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 236,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 237,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 238,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 2 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 239,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 240,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 241,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 3 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 242,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 243,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 244,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 4 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 245,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 246,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 247,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 5 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 248,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 249,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 250,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 6 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 251,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 252,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 253,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 7 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 254,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 255,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 256,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 8 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 257,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 258,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 259,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 9 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 260,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 1 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 1 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 1 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 2 Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 2 Available',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Stage 2 Ready',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor A Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor B Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Fluid Flow Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - High Discharge Pressure Switch Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Remote Start Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Auxillary Alarm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Evaporator Fluid Dif Pressure Switch Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Phase Monitor Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Pump Tank Confirm Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 261,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Alarm Horn Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Alarm Warning Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor A Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor B Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 1 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 2 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 3 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 4 Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Cooling Active Digital  Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Liquid Line Solenoid Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Pump Tank Enable Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - System Online Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Discharge Pressure PreStart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Discharge Pressure Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Electronic Expansion Valve Prestart Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 14,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Electronic Expansion Valve Hold Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 262,
+                'offset' => 15,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor A Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor B Anticycle Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 1,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Pump Down Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 2,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor B is the Lead Compressor',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 3,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Hot Gas Saturated Suction Temp PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 4,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Hot Gas Saturated Discharge Pressure PID Active',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 5,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor A Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 6,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Compressor B Critical Alarm',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 7,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 2 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 8,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 3 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 9,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Condenser Fan 4 Fault Digital Input',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 10,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - EVD has booted',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 11,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Alarm Light Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 12,
+                'bytes' => 1
+            ], [
+                'name' => 'Circuit 10 - Alarm Fault Digital Output',
+                'machine_id' => MACHINE_HE_CENTRAL_CHILLER,
+                'tag_id' => 263,
+                'offset' => 13,
+                'bytes' => 1
+            ], [
+                'name' => 'Alarm 1',
+                'machine_id' => MACHINE_TRUETEMP_TCU,
+                'tag_id' => 10,
+                'offset' => 0,
+                'bytes' => 1
+            ], [
+                'name' => 'Alarm 2',
+                'machine_id' => MACHINE_TRUETEMP_TCU,
+                'tag_id' => 11,
+                'offset' => 0,
                 'bytes' => 1
             ]
        ];

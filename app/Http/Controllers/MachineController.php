@@ -19,13 +19,17 @@ use App\Tag;
 use App\InventoryMaterial;
 use App\SystemInventory;
 use App\MachineTag;
+use App\Report;
+use App\Exports\MachinesReportSheetExport;
 use App\Mail\RequestService;
 use GuzzleHttp\Client;
 
 use DB;
 use Mail;
+use File;
 use \stdClass;
 use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
 
 class MachineController extends Controller
 {
@@ -123,10 +127,127 @@ class MachineController extends Controller
         }
 	}
 
-	public function getMachines() {
-		$machines = Machine::select('id', 'name', 'device_type')->orderBy('id')->get();
+	public function getMachines(Request $request) {
+        $user = $request->user('api');
 
-		return response()->json(compact('machines'));
+        $location = $request->location;
+        $zone = $request->zone;
+
+        if($user->hasRole(['acs_admin', 'acs_manager', 'acs_viewer'])) {
+            $devices = Device::where('location_id', $location)->where('zone_id', $zone)->get();
+        } else {
+            $devices = $user->company->devices()->where('location_id', $location)->where('zone_id', $zone)->get();
+        }
+
+        return response()->json(compact('devices'));
+    }
+
+	public function generateMachinesReport(Request $request) {
+		$response = [];
+		$from = strtotime($request->timeRange['dateFrom'] . ' ' . $request->timeRange['timeFrom']);
+		$to = strtotime($request->timeRange['dateTo'] . ' ' . $request->timeRange['timeTo']);
+		foreach ($request->machineTags as $key => $tags) {
+			$machine = Device::where('device_id', $key)->first();
+			$machine_info = new stdClass();
+			$tag_ids = [];
+			$tag_info = [];
+			$series = [];
+			foreach ($tags as &$tag) {
+				$tag_infos = DeviceData::where('machine_id', $machine->machine_id)
+								->where('device_id', $machine->serial_number)
+								->where('tag_id', $tag['tag_id'])
+								->where('timestamp', '>', $from)
+								->where('timestamp', '<', $to)
+								->orderBy('timestamp')
+								->get();
+
+				if($tag_infos) {
+					$ss = $tag_infos->map(function($object) use ($tag) {
+						$divide_by = isset($tag['divided_by']) ? $tag['divided_by'] : 1;
+						$offset = $tag['offset'] ? $tag['offset'] : 0;
+						$bytes = isset($tag['bytes']) ? $tag['bytes'] : 0;
+						if ($bytes) {
+							$value = ((json_decode($object->values)[0] >> $tag['offset']) & $tag['bytes']);
+						} else {
+							$value = json_decode($object->values)[$offset] / $divide_by;
+						}
+						return [$object->timedata, round($value, 3), $tag['name']];
+					});
+				}
+				array_push($tag_info, $ss);
+			}
+
+			foreach ($tag_info as &$item) {
+				array_push($series, ...$item);
+			}
+
+			$collection = collect($series);
+			$collection->sortBy(function ($item) {
+				return $item[0];
+			});
+
+			$sorted = $collection->all();
+
+			$machine_info->machine_name = $machine->name;
+			$machine_info->tags = $sorted;
+			array_push($response, $machine_info);
+		}
+
+		Excel::store(new MachinesReportSheetExport($response), 'report.xlsx');
+        File::move(storage_path('app/report.xlsx'), public_path('assets/app/reports/' . $request->reportTitle . '.xlsx'));
+
+		$data = Report::where('filename', $request->reportTitle)->first();
+
+		if (!$data) {
+			Report::create([
+				'filename' => $request->reportTitle,
+				'from' => $request->timeRange['dateFrom'] . ' ' . $request->timeRange['timeFrom'],
+				'to' => $request->timeRange['dateTo'] . ' ' . $request->timeRange['timeTo']
+			]);
+		} else {
+			$data->filename = $request->reportTitle;
+			$data->from = $request->timeRange['dateFrom'] . ' ' . $request->timeRange['timeFrom'];
+			$data->to = $request->timeRange['dateTo'] . ' ' . $request->timeRange['timeTo'];
+
+			$data->save();
+		}
+
+		return response()->json([
+			'message' => 'Successfully generated',
+			'filename' => $request->reportTitle
+		]);
+	}
+
+	public function getMachinesReport() {
+		$reports = Report::all();
+
+		return response()->json(compact('reports'));
+	}
+
+	public function deleteMachinesReport($id) {
+		$report = Report::where('id', $id)->first();
+
+		if ($report) {
+			if (File::exists(public_path('assets/app/reports/' . $report->filename . '.xlsx'))) {
+				File::delete(public_path('assets/app/reports/' . $report->filename . '.xlsx'));
+				$status = true;
+				$message = 'Report deleted successfully.';
+			} else {
+				$status = false;
+				$message = 'File does not exists';
+			}
+
+			$report->delete();
+		}
+
+		$reports = Report::all();
+
+		return response()->json([
+			'status' => $status,
+			'message' => $message,
+			'reports' => $reports
+		]);
+		
 	}
 	/*
 		Get general information of product
@@ -695,7 +816,7 @@ class MachineController extends Controller
 			$item->value = 0;
 
 			if( $last_object) {
-				if ($i === 0) {
+				if ($i == 0) {
 					$item->value = sprintf('%01.1f', json_decode($last_object->values)[0] / 10);
 				} else {
 					$item->value = json_decode($last_object->values)[0];
@@ -783,25 +904,49 @@ class MachineController extends Controller
 		return: Utilization Series Array
 	*/
 	public function getProductUtilization(Request $request) {
-		$tag_utilization = Tag::where('tag_name', 'capacity_utilization')->where('configuration_id', $request->machineId)->first();
-
-		if(!$tag_utilization) {
-			return response()->json('Capacity utilization tag not found', 404);
-		}
-
 		$from = $this->getFromTo($request->timeRange)["from"];
 		$to = $this->getFromTo($request->timeRange)["to"];
 
-		$utilizations_object = DB::table('utilizations')
-								->where('serial_number', $request->serialNumber)
-								->where('tag_id', $tag_utilization->tag_id)
-								->where('timestamp', '>', $from)
-								->where('timestamp', '<', $to)
-								->orderBy('timestamp')
-								->get();
+		if ($request->machineId == 11) {
+			$utilizations_object = DB::table('utilizations')
+									->where('serial_number', $request->serialNumber)
+									->where('tag_id', 28)
+									->where('timestamp', '>', $from)
+									->where('timestamp', '<', $to)
+									->orderBy('timestamp')
+									->get();
 
-		$utilizations = $this->averagedSeries($utilizations_object, 200, 10);
+			if (!$utilizations_object) {
+				$utilizations_object = DB::table('utilizations')
+									->where('serial_number', $request->serialNumber)
+									->where('tag_id', 29)
+									->where('timestamp', '>', $from)
+									->where('timestamp', '<', $to)
+									->orderBy('timestamp')
+									->get();
 
+				$utilizations = $this->averagedSeries($utilizations_object, 200, 10);
+			} else {
+				$utilizations = $this->averagedSeries($utilizations_object, 200, 10);
+			}
+		} else {
+			$tag_utilization = Tag::where('tag_name', 'capacity_utilization')->where('configuration_id', $request->machineId)->first();
+
+			if(!$tag_utilization) {
+				return response()->json('Capacity utilization tag not found', 404);
+			}
+	
+			$utilizations_object = DB::table('utilizations')
+									->where('serial_number', $request->serialNumber)
+									->where('tag_id', $tag_utilization->tag_id)
+									->where('timestamp', '>', $from)
+									->where('timestamp', '<', $to)
+									->orderBy('timestamp')
+									->get();
+	
+			$utilizations = $this->averagedSeries($utilizations_object, 200, 10);
+	
+		}
 		$items = [$utilizations];
 
 		return response()->json(compact('items'));
@@ -1816,12 +1961,15 @@ class MachineController extends Controller
 		}
 
 		if($unit == 1) {
-			$items[0] = round(($items[0] - 32) * 5 / 9, 2);
-			$items[1] = round(($items[1] - 32) * 5 / 9, 2);
-			$items[2] = round(($items[0] - 32) * 5 / 9, 2);
+			$items[0] = round($items[0] * 9 / 5 + 32, 2);
+			$items[1] = round($items[1] * 9 / 5 + 32, 2);
+			$items[2] = round($items[2] * 9 / 5 + 32, 2);
 		}
 
-		return response()->json(compact('items'));
+		return response()->json([
+			'items' => $items,
+			'unit' => $unit == 0 ? 'ºC' : 'ºF'
+		]);
 	}
 
 	/*
