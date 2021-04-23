@@ -27,6 +27,8 @@ class CreateThresholdsTable extends Migration
             $table->integer('multipled_by')->default(1);
             $table->string('serial_number', 20)->default('');
             $table->integer('bytes')->default(0);
+            $table->boolean('message_status')->default(false);
+            $table->timestamp('last_triggered_at')->nullable();
             $table->timestamps();
         });
     }
