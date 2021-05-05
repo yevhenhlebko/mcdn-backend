@@ -45,6 +45,9 @@ Route::group(['prefix' => 'materials'], function () {
 
 	Route::post('/system-inventory-report', 'MaterialController@getSystemInventoryReport')->middleware('auth:customer_admin');
 	Route::post('/system-inventory-report/export', 'MaterialController@exportSystemInventoryReport')->middleware('auth:customer_admin');
+
+	Route::post('/system-inventory-report-data', 'MaterialController@getSystemInventoryReportData')->middleware('auth:customer_admin');
+	Route::post('/system-inventory-report-data/export', 'MaterialController@exportSystemInventoryReportData')->middleware('auth:customer_admin');
 });
 
 Route::apiResource('configurations', ConfigurationController::class)->only(['show', 'update', 'index'])->middleware('auth');
@@ -127,6 +130,7 @@ Route::group(['prefix' => 'machines'], function () {
 	Route::get('/get-machines-report', 'MachineController@getMachinesReport');
 	Route::delete('/report/{id}', 'MachineController@deleteMachinesReport');
 	Route::post('/get-blender-weights', 'MachineController@getBlenderWeights');
+	Route::post('/get-alarm-history', 'AlarmController@getProductAlarmHistory');
 });
 
 Route::group(['prefix' => 'analytics'], function () {
@@ -223,6 +227,8 @@ Route::group(['prefix' => 'thresholds'], function () {
 	Route::delete('/{id}', 'ThresholdController@deleteThreshold');
 	Route::put('/{id}', 'ThresholdController@updateThreshold');
 	Route::post('/clear', 'ThresholdController@clearThresholdStatus');
+	Route::get('/approaching', 'ThresholdController@getApproachingThresholds');
+	Route::post('/clear-approaching', 'ThresholdController@clearApproachingStatus');
 });
 
 Route::post('test/send-mail', 'CompanyController@testMail');
