@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Validator;
 
 use App\Material;
 use App\MaterialLocation;
@@ -34,13 +36,13 @@ class MaterialController extends Controller
 	}
 
 	public function store(Request $request) {
-		$validator = Validator::make($request->all(), [ 
+		$validator = Validator::make($request->all(), [
             'material' => 'required',
         ]);
 
         if ($validator->fails())
         {
-            return response()->json(['error'=>$validator->errors()], 422);            
+            return response()->json(['error'=>$validator->errors()], 422);
         }
 
         $user = $request->user('api');
@@ -55,13 +57,13 @@ class MaterialController extends Controller
 	}
 
 	public function update(Request $request, Material $material) {
-		$validator = Validator::make($request->all(), [ 
+		$validator = Validator::make($request->all(), [
             'material' => 'required',
         ]);
 
         if ($validator->fails())
         {
-            return response()->json(['error'=>$validator->errors()], 422);            
+            return response()->json(['error'=>$validator->errors()], 422);
         }
 
         $material->update([
@@ -151,7 +153,7 @@ class MaterialController extends Controller
                     array_push($reportItems, $item);
                 }
             }
-            
+
             $track->reportItems = $reportItems;
         }
 
@@ -245,6 +247,110 @@ class MaterialController extends Controller
         ]);
     }
 
+    /**
+     *  Calculates the total values of materials used for a specified period in a specified location
+     */
+    public function getSystemInventoryReportData(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'timeRange' => 'required',
+            'location' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => implode(' ', Arr::flatten($validator->errors()->getMessages()))], 422);
+        }
+
+        $dateFrom = Carbon::parse($request->timeRange['dateFrom'] . ' ' . $request->timeRange['timeFrom'])->timestamp;
+        $dateTo = Carbon::parse($request->timeRange['dateTo'] . ' ' . $request->timeRange['timeTo'])->timestamp;
+
+        $user = $request->user('api');
+        $company = $user->company;
+        $devices_serial_numbers = $company->devices->where('location_id', $request->location)->pluck('serial_number');
+        $teltonika_ids = TeltonikaConfiguration::whereIn('teltonika_id', $devices_serial_numbers)->get()->pluck('plc_serial_number');
+        $inventory_materials = $company->inventoryMaterials->whereIn('plc_id', $teltonika_ids);
+
+        $material_keys = InventoryMaterial::MATERIAL_KEYS_ARRAY;
+
+        // 1. change materials to useful keyed array values
+        $keyed_materials = $company->materials->mapWithKeys(function ($material) {
+            return [
+                $material['id'] => [
+                    'material' => $material['material'],
+                    'value' => 0,
+                ],
+            ];
+        })->all();
+
+        // 2. calculate inventories for each material till now
+        foreach ($inventory_materials as $key => $inventory_material) {
+
+            $inventory_material_array = $inventory_material->toArray();
+
+            // 3. account current inventory into materials inventory
+            $hop_material1 = DeviceData::where('serial_number', $inventory_material->plc_id)
+                ->where('tag_id', 15)
+                ->where('timestamp', '>=', $dateFrom)
+                ->oldest('timedata')
+                ->first();
+
+            $hop_material2 = DeviceData::where('serial_number', $inventory_material->plc_id)
+                ->where('tag_id', 15)
+                ->where('timestamp', '<=', $dateTo)
+                ->latest('timedata')
+                ->first();
+
+            $actual_material1 = DeviceData::where('serial_number', $inventory_material->plc_id)
+                ->where('tag_id', 16)
+                ->where('timestamp', '>=', $dateFrom)
+                ->oldest('timedata')
+                ->first();
+
+            $actual_material2 = DeviceData::where('serial_number', $inventory_material->plc_id)
+                ->where('tag_id', 16)
+                ->where('timestamp', '<=', $dateTo)
+                ->latest('timedata')
+                ->first();
+
+            for ($i = 0; $i < 8; $i++) {
+                $material_id = $inventory_material_array[$material_keys[$i]] ?? null;
+
+                if ($material_id) {
+                    $keyed_materials[$material_id]['value'] += (
+                        (json_decode($hop_material2->values)[$i] + json_decode($actual_material2->values)[$i] / 1000) -
+                        (json_decode($hop_material1->values)[$i] + json_decode($actual_material1->values)[$i] / 1000)
+                    );
+                }
+            }
+        }
+
+        return ['keyed_materials' => collect($keyed_materials)->values()->toArray()];
+    }
+
+    /**
+     *  Export calculates total values of materials used for a specified period in a specified location
+     *
+     * @reyurn json response
+     */
+    public function exportSystemInventoryReportData(Request $request)
+    {
+        $keyed_materials = $this->getSystemInventoryReportData($request);
+
+        if (!isset($keyed_materials['keyed_materials'])) {
+            return $keyed_materials;
+        }
+
+        $filename = $request->user('api')->company->name . ' - System Inventory Report' . '.xlsx';
+
+        Excel::store(new SystemInventoryReportExport($keyed_materials['keyed_materials']), $filename);
+        File::move(storage_path('app/' . $filename), public_path('assets/app/reports/' . $filename));
+
+        return response()->json([
+            'mesage' => 'Successfully exported',
+            'filename' => $filename
+        ]);
+    }
+
     public function getSystemInventoryReport(Request $request) {
         $keyed_materials = $this->helperGetSystemInventoryReport($request);
 
@@ -280,7 +386,7 @@ class MaterialController extends Controller
                 if ($last_material)
                     $keyed_materials[$last_material->material_id]['value'] += ($system_inventory->inventory - $last_material->inventory);
             }
-            
+
             // 3. account current inventory into materials inventory
             $hop_material = DeviceData::where('serial_number', $inventory_material->plc_id)
                 ->where('tag_id', 15)
