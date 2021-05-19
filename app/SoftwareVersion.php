@@ -3,11 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Rennokki\QueryCache\Traits\QueryCacheable;
 
-class EnergyConsumption extends Model
+class SoftwareVersion extends Model
 {
-    protected $table = 'energy_consumptions';
+    protected $table = 'software_version';
 
     protected $fillable = [
         'device_id',
@@ -16,8 +15,6 @@ class EnergyConsumption extends Model
         'values',
         'machine_id',
         'serial_number',
-        'timedata',
-        'customer_id'
     ];
 
     public $timestamps = false;

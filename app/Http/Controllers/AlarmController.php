@@ -181,7 +181,8 @@ class AlarmController extends Controller
 				if($alarm_type->bytes == 0 && $alarm_type->offset == 0)
 					$alarm->active = $value32[0];
 				else if($alarm_type->bytes == 0 && $alarm_type->offset != 0) {
-					$alarm->active = $value32[$alarm_type->offset] == 1;
+					$offset = isset($tag['offset']) ? $tag['offset'] : 0;
+					$alarm->active = !!$value32[$offset] == true;
 				} else if($alarm_type->bytes != 0) {
 					$alarm->active = ($value32[0] >> $alarm_type->offset) & $alarm_type->bytes;
 				}
@@ -251,7 +252,12 @@ class AlarmController extends Controller
 
 	public function getAlarmsReports(Request $request) {
 		$user = $request->user('api');
-		$machine_ids = $user->company->devices->pluck('machine_id');
+		if ($request->companyId == 0) {
+			$machine_ids = $user->company->devices->pluck('machine_id');
+		} else {
+			$company = Company::where('id', $request->companyId)->first();
+			$machine_ids = $company->devices->pluck('machine_id');
+		}
 		$alarm_types = AlarmType::whereIn('machine_id', $machine_ids)->orderBy('id')->get();
 		$tag_ids = $alarm_types->unique('tag_id')->pluck('tag_id');
 
@@ -279,24 +285,29 @@ class AlarmController extends Controller
 				if($alarm_type->bytes == 0 && $alarm_type->offset == 0)
 					$alarm->active = $value32[0];
 				else if($alarm_type->bytes == 0 && $alarm_type->offset != 0) {
-					$alarm->active = $value32[$alarm_type->offset] == 1;
+					$offset = isset($tag['offset']) ? $tag['offset'] : 0;
+					$alarm->active = !!$value32[$offset] == true;
 				} else if($alarm_type->bytes != 0) {
 					$alarm->active = ($value32[0] >> $alarm_type->offset) & $alarm_type->bytes;
 				}
 
 				$alarm->type_id = $alarm_type->id;
 
-				array_push($alarms, $alarm);
+				$machine_info = Device::where('serial_number', $alarm_object->device_id)->first();
+
+				$machine_name = $machine_info ? Machine::where('id', $machine_info->machine_id)->first()->name : '';
+
+				$alarm->machine_info = $machine_info ? $machine_info : null;
+				$alarm->machine_name = $machine_name;
+				$alarm->alarm_name = $alarm_type->name;
+
+				if ($alarm->active) {
+					array_push($alarms, $alarm);
+				}
 			}
 		}
 
-		foreach ($alarm_types as $alarm_type) {
-			$machine = Machine::select('name')->where('id', $alarm_type->machine_id)->get()->first();
-
-			$alarm_type['machine_name'] = $machine->name;
-		}
-
-		return response()->json(compact('alarms', 'alarm_types'));
+		return response()->json(compact('alarms'));
 	}
 
 	public function getAlarmTypesByMachineId($id) {
