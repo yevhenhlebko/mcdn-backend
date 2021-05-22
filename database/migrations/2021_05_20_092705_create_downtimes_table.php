@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIdleTable extends Migration
+class CreateDowntimesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateIdleTable extends Migration
      */
     public function up()
     {
-        Schema::create('idle', function (Blueprint $table) {
+        Schema::create('downtimes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('device_id');
-            $table->unsignedBigInteger('machine_id')->default(0);
-            $table->unsignedBigInteger('tag_id');
-            $table->unsignedBigInteger('timestamp');
-            $table->json('values');
-            $table->unsignedBigInteger('serial_number')->default(0);
+            $table->unsignedBigInteger('start_time');
+            $table->unsignedBigInteger('end_time');
+            $table->integer('type')->default(0);
+            $table->string('reason')->default('Other');
+            $table->string('comment')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -31,6 +32,6 @@ class CreateIdleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('idle');
+        Schema::dropIfExists('downtimes');
     }
 }
