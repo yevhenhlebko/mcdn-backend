@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Running;
 use App\Setting;
 use Illuminate\Http\Request;
 use App\Device;
@@ -15,6 +16,10 @@ use App\EnergyConsumption;
 use App\Utilization;
 use App\TeltonikaConfiguration;
 use App\Tag;
+use App\EnabledProperty;
+use App\Downtimes;
+use App\DowntimeType;
+use App\DowntimeReason;
 use App\Imports\DevicesImport;
 use Maatwebsite\Excel\Facades\Excel;
 use GuzzleHttp\Client;
@@ -66,8 +71,7 @@ class DeviceController extends Controller
             ->first();
 
         if ($tag) {
-            $running = DB::table('runnings')
-                ->where('serial_number', $serialNumber)
+            $running = Running::where('serial_number', $serialNumber)
                 ->where('tag_id', $tag->tag_id)
                 ->latest('timestamp')
                 ->first();
@@ -170,38 +174,30 @@ class DeviceController extends Controller
     {
         $user = $request->user('api');
 
-        $rows = DB::table('enabled_properties')->where('user_id', $user->id)->where('serial_number', $request->serial_number);
-        if($rows->count()) {
-            $obj = $rows->first();
-            $ids = [];
-            $existing_ids = json_decode($obj->property_ids);
+        $obj = EnabledProperty::firstOrCreate([
+            'serial_number' => $request->serial_number,
+            'user_id' => $user->id,
+        ], [
+            'property_ids' => json_encode($request->enabled_properties)
+        ]);
 
-            if($request->isImportant) {
-                foreach ($existing_ids as $value) {
-                    if($value > 100) array_push($ids, $value);
-                }
-                $ids = array_merge($ids, $request->enabled_properties);
-            } else {
-                foreach ($existing_ids as $value) {
-                    if($value < 100) array_push($ids, $value);
-                }
-                $ids = array_merge($ids, $request->enabled_properties);
+        $ids = [];
+        $existing_ids = json_decode($obj->property_ids);
+
+        if ($request->isImportant) {
+            foreach ($existing_ids as $value) {
+                if ($value > 100) array_push($ids, $value);
             }
 
-            $rows->update(
-                [
-                    'property_ids' => json_encode($ids)
-                ]
-            );
         } else {
-            DB::table('enabled_properties')->insert(
-                [
-                    'serial_number' => $request->serial_number,
-                    'user_id' => $user->id,
-                    'property_ids' => json_encode($request->enabled_properties)
-                ]
-            );
+            foreach ($existing_ids as $value) {
+                if ($value < 100) array_push($ids, $value);
+            }
         }
+
+        EnabledProperty::whereId($obj->id)->update([
+            'property_ids' => json_encode(array_merge($ids, $request->enabled_properties))
+        ]);
 
         return response()->json('Updated successfully');
     }
@@ -224,8 +220,13 @@ class DeviceController extends Controller
         ]);
     }
 
-    public function getAllDevices() {
-        $devices = Device::orderBy('sim_status', 'ASC')->where('iccid', '<>', 0)->whereNotNull('iccid')->select('name', 'id', 'customer_assigned_name', 'tcu_added')->get();
+    public function getAllDevices()
+    {
+        $devices = Device::orderBy('sim_status', 'ASC')
+            ->where('iccid', '<>', 0)
+            ->whereNotNull('iccid')
+            ->select('name', 'id', 'customer_assigned_name', 'tcu_added')
+            ->get();
 
         return response()->json(compact('devices'));
     }
@@ -831,6 +832,361 @@ class DeviceController extends Controller
         }
 
         return response()->json(compact('devices'));
+    }
+
+    public function getDowntimeGraphData(Request $request) {
+        $user = $request->user('api');
+
+        $timeFrom = $request->from / 1000;
+        $timeTo = $request->to / 1000;
+
+        $total_downtime = 0;
+        $average_downtime = new stdClass();
+        $average_downtime->name = 'Average Downtime';
+        $average_downtime->type = 'line';
+        $average_downtime->data = [];
+        $dates = [];
+
+        $devices = null;
+        $location = $request->location_id;
+        $zone = $request->zone_id;
+
+        $devices = $user->getMyDevices($location, $zone)->pluck('serial_number')->toArray();
+
+        $ids = implode(", ", $devices);
+
+        $query = "select
+                aggregated_subquery.reason_name as name,
+                json_agg(ROUND(aggregated_subquery.hours_sum::numeric, 3) order by aggregated_subquery.output_date_int) as data
+            from (
+                select
+                    detailed_subquery.reason_name as reason_name,
+                    detailed_subquery.output_date_int as output_date_int,
+                    coalesce(sum(detailed_subquery.corrected_downtime_end_int - detailed_subquery.corrected_downtime_start_int)/(60*60), 0) as hours_sum
+                from (
+                    with
+                    input_params as (
+                        select
+                            $timeFrom as start_datetime,
+                            $timeTo as end_datetime
+                    ),
+                    datetime_config as (
+                        select 60*60*24 as day_duration
+                    ),
+                    output_dates as (
+                        select generate_series(
+                            date_trunc('day', to_timestamp(input_params.start_datetime)),
+                            case when 
+                                extract(hour from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(minute from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(second from to_timestamp(input_params.end_datetime)) = 0
+                            then
+                                date_trunc('day', to_timestamp(input_params.end_datetime - datetime_config.day_duration))
+                            else
+                                to_timestamp(input_params.end_datetime)
+                            end,
+                            interval '1 day'
+                        ) as generated_date
+                        from input_params, datetime_config
+                    ),
+                    output_dates_int as (
+                        select
+                            extract(epoch from generated_date) as date
+                        from output_dates
+                    )
+                    
+                    select
+                        output_dates_int.date as output_date_int,
+                        downtime_reasons.name as reason_name,
+                    
+                        case when downtimes.start_time is not null then
+                            greatest(input_params.start_datetime, output_dates_int.date, downtimes.start_time)
+                        else
+                            null
+                        end as corrected_downtime_start_int,
+                    
+                        case when downtimes.start_time is not null then
+                            least(input_params.end_datetime, output_dates_int.date + datetime_config.day_duration, downtimes.end_time)
+                        else
+                            null
+                        end as corrected_downtime_end_int
+                    
+                    from input_params
+                    left join output_dates_int on 0 = 0
+                    left join downtime_reasons on 0 = 0
+                    left join datetime_config on 0 = 0
+                    left join downtimes on downtimes.reason_id = downtime_reasons.id
+                        and downtimes.start_time <= least(output_dates_int.date + datetime_config.day_duration, input_params.end_datetime)
+                        and downtimes.end_time >= greatest(output_dates_int.date, input_params.start_datetime)
+                        and downtimes.device_id in ($ids)
+                    order by output_dates_int.date, downtime_reasons.name, downtimes.start_time
+                    
+                ) as detailed_subquery
+                group by detailed_subquery.reason_name, detailed_subquery.output_date_int
+                
+            ) as aggregated_subquery
+            group by aggregated_subquery.reason_name";
+
+        $date_generate_query = "select generate_series(
+            date_trunc('day', to_timestamp($timeFrom)),
+            case when
+                extract(hour from to_timestamp($timeTo)) = 0
+                and extract(minute from to_timestamp($timeTo)) = 0
+                and extract(second from to_timestamp($timeTo)) = 0
+            then
+                date_trunc('day', to_timestamp($timeTo - 60*60*24))
+            else
+                to_timestamp($timeTo)
+            end,
+            interval '1 day'
+            )::date as generated_date";
+
+        $series = DB::select($query);
+        $generated_dates = DB::select($date_generate_query);
+
+        foreach ($series as $data) {
+            $data->data = json_decode($data->data);
+            $data->type = 'column';
+            $total_downtime += array_sum($data->data);
+        };
+
+        foreach ($generated_dates as $date) {
+            array_push($dates, $date->generated_date);
+            array_push($average_downtime->data, round($total_downtime / count($generated_dates), 3));
+        };
+
+        array_push($series, $average_downtime);
+
+        return response()->json(compact('series', 'dates'));
+    }
+
+    public function getDowntimeByTypeGraphData(Request $request) {
+        $user = $request->user('api');
+
+        $timeFrom = $request->from / 1000;
+        $timeTo = $request->to / 1000;
+
+        $devices = null;
+        $location = $request->location_id;
+        $zone = $request->zone_id;
+
+        $devices = $user->getMyDevices($location, $zone)->pluck('serial_number')->toArray();
+
+        $ids = implode(", ", $devices);
+
+        $query = "select
+                overall_subquery.type_name as name,
+                ROUND(sum(overall_subquery.hours_sum)::numeric, 3) as data
+            from (
+                select
+                    detailed_subquery.type_name as type_name,
+                    detailed_subquery.output_date_int as output_date_int,
+                    coalesce(sum(detailed_subquery.corrected_downtime_end_int - detailed_subquery.corrected_downtime_start_int)/(60*60), 0) as hours_sum
+                from (
+                    with
+                    input_params as (
+                        select
+                            $timeFrom as start_datetime,
+                            $timeTo as end_datetime
+                    ),
+                    datetime_config as (
+                        select 60*60*24 as day_duration
+                    ),
+                    output_dates as (
+                        select generate_series(
+                            date_trunc('day', to_timestamp(input_params.start_datetime)),
+                            case when 
+                                extract(hour from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(minute from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(second from to_timestamp(input_params.end_datetime)) = 0
+                            then
+                                date_trunc('day', to_timestamp(input_params.end_datetime - datetime_config.day_duration))
+                            else
+                                to_timestamp(input_params.end_datetime)
+                            end,
+                            interval '1 day'
+                        ) as generated_date
+                        from input_params, datetime_config
+                    ),
+                    output_dates_int as (
+                        select
+                            extract(epoch from generated_date) as date
+                        from output_dates
+                    )
+                    
+                    select
+                        output_dates_int.date as output_date_int,
+                        downtime_type.name as type_name,
+                    
+                        case when downtimes.start_time is not null then
+                            greatest(input_params.start_datetime, output_dates_int.date, downtimes.start_time)
+                        else
+                            null
+                        end as corrected_downtime_start_int,
+                    
+                        case when downtimes.start_time is not null then
+                            least(input_params.end_datetime, output_dates_int.date + datetime_config.day_duration, downtimes.end_time)
+                        else
+                            null
+                        end as corrected_downtime_end_int
+                    
+                    from input_params
+                    left join output_dates_int on 0 = 0
+                    left join downtime_type on 0 = 0
+                    left join datetime_config on 0 = 0
+                    left join downtimes on downtimes.type = downtime_type.id
+                        and downtimes.start_time <= least(output_dates_int.date + datetime_config.day_duration, input_params.end_datetime)
+                        and downtimes.end_time >= greatest(output_dates_int.date, input_params.start_datetime)
+                        and downtimes.device_id in ($ids)
+                    order by output_dates_int.date, downtime_type.name, downtimes.start_time
+                    
+                ) as detailed_subquery
+                group by detailed_subquery.type_name, detailed_subquery.output_date_int
+            ) as overall_subquery
+            group by overall_subquery.type_name
+            order by data desc";
+
+        $series = DB::select($query);
+
+        foreach ($series as $data) {
+            $data->data = json_decode($data->data);
+        };
+
+        return response()->json(compact('series'));
+    }
+
+    public function getDowntimeByReasonGraphData(Request $request) {
+        $user = $request->user('api');
+
+        $timeFrom = $request->from / 1000;
+        $timeTo = $request->to / 1000;
+
+        $devices = null;
+        $location = $request->location_id;
+        $zone = $request->zone_id;
+
+        $devices = $user->getMyDevices($location, $zone)->pluck('serial_number')->toArray();
+
+        $ids = implode(", ", $devices);
+
+        $query = "select
+                overall_subquery.reason_name as name,
+                ROUND(sum(hours_sum)::numeric, 3) as data
+            from (
+                select
+                    detailed_subquery.reason_name as reason_name,
+                    detailed_subquery.output_date_int as output_date_int,
+                    coalesce(sum(detailed_subquery.corrected_downtime_end_int - detailed_subquery.corrected_downtime_start_int)/(60*60), 0) as hours_sum
+                from (
+                    with
+                    input_params as (
+                        select
+                            $timeFrom as start_datetime,
+                            $timeTo as end_datetime
+                    ),
+                    datetime_config as (
+                        select 60*60*24 as day_duration
+                    ),
+                    output_dates as (
+                        select generate_series(
+                            date_trunc('day', to_timestamp(input_params.start_datetime)),
+                            case when 
+                                extract(hour from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(minute from to_timestamp(input_params.end_datetime)) = 0 
+                                and extract(second from to_timestamp(input_params.end_datetime)) = 0
+                            then
+                                date_trunc('day', to_timestamp(input_params.end_datetime - datetime_config.day_duration))
+                            else
+                                to_timestamp(input_params.end_datetime)
+                            end,
+                            interval '1 day'
+                        ) as generated_date
+                        from input_params, datetime_config
+                    ),
+                    output_dates_int as (
+                        select
+                            extract(epoch from generated_date) as date
+                        from output_dates
+                    )
+                    
+                    select
+                        output_dates_int.date as output_date_int,
+                        downtime_reasons.name as reason_name,
+                    
+                        case when downtimes.start_time is not null then
+                            greatest(input_params.start_datetime, output_dates_int.date, downtimes.start_time)
+                        else
+                            null
+                        end as corrected_downtime_start_int,
+                    
+                        case when downtimes.start_time is not null then
+                            least(input_params.end_datetime, output_dates_int.date + datetime_config.day_duration, downtimes.end_time)
+                        else
+                            null
+                        end as corrected_downtime_end_int
+                    
+                    from input_params
+                    left join output_dates_int on 0 = 0
+                    left join downtime_reasons on 0 = 0
+                    left join datetime_config on 0 = 0
+                    left join downtimes on downtimes.reason_id = downtime_reasons.id
+                        and downtimes.start_time <= least(output_dates_int.date + datetime_config.day_duration, input_params.end_datetime)
+                        and downtimes.end_time >= greatest(output_dates_int.date, input_params.start_datetime)
+                        and downtimes.device_id in ($ids)
+                    order by output_dates_int.date, downtime_reasons.name, downtimes.start_time
+                    
+                ) as detailed_subquery
+                group by detailed_subquery.reason_name, detailed_subquery.output_date_int
+            ) as overall_subquery
+            group by overall_subquery.reason_name
+            order by data desc";
+
+        $series = DB::select($query);
+
+        foreach ($series as $data) {
+            $data->data = json_decode($data->data);
+        };
+
+        return response()->json(compact('series'));
+    }
+
+    public function getDowntimeTableData(Request $request) {
+        $user = $request->user('api');
+
+        $device_ids = $user->company->devices->pluck('serial_number');
+        $devices = $user->company->devices()->with('teltonikaConfiguration', 'configuration:id,name')->get();
+        $downtimeTypes = DowntimeType::get();
+        $locations = Location::get();
+        $zones = Zone::get();
+        $reasons = DowntimeReason::get();
+
+        $downtimes = Downtimes::whereIn('device_id', $device_ids)
+                                ->orderBy('id')
+                                ->get();
+
+        return response()->json(compact('downtimes', 'devices', 'downtimeTypes', 'locations', 'zones', 'reasons'));
+    }
+
+    public function updateDowntime(Request $request) {
+        $downtime = Downtimes::where('id', $request->id)->first();
+
+        try {
+            $downtime->update([
+                'reason_id' => $request->reason['id'],
+                'type' => $request->type['id'],
+                'comment' => $request->comment
+            ]);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Updated successfully'
+            ]);
+        } catch (\GuzzleHttp\Exception\BadResponseException $e) {
+            return response()->json([
+                'status' => 'failed',
+                'message' => 'Failed to update downtime'
+            ]);
+        };
     }
 
     public function testFunction(Request $request) {
